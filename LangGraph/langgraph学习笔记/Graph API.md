@@ -16,7 +16,7 @@ Graph API分为
 
 是一种通过状态,节点,边相连创造出的
 
-![image-20260523104809194](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260523104809194.png)
+![image-20260523104809194](./assets/image-20260523104809194.png)
 
 流程:
 
@@ -46,7 +46,7 @@ Graph API分为
 
 ### 1.图的模式（schema）
 
-![image-20260523105314971](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260523105314971.png)
+![image-20260523105314971](./assets/image-20260523105314971.png)
 
 (1)state_schema:
 
@@ -92,7 +92,7 @@ class OutputState(TypedDict):
 State可以是TypedDict类型，
 也可以是pydantic中的BaseModel类型
 
-![image-20260523105613071](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260523105613071.png)
+![image-20260523105613071](./assets/image-20260523105613071.png)
 
 '一句话选型
 想要 轻量、无运行时开销、习惯字典写法 → 用 TypedDict
@@ -255,11 +255,11 @@ def run_demo():
 
 运行方法,注意这两个节点是并行的所以打印出的可视化结构也是并行的
 
-![image-20260523141708614](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260523141708614.png)
+![image-20260523141708614](./assets/image-20260523141708614.png)
 
 执行结果也是在后面追加
 
-![image-20260523141827199](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260523141827199.png)
+![image-20260523141827199](./assets/image-20260523141827199.png)
 
 #### operator.add
 
@@ -469,7 +469,7 @@ result = graph.invoke({
 
 ------
 
-![image-20260523150634488](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260523150634488.png)
+![image-20260523150634488](./assets/image-20260523150634488.png)
 
 ### Node的设计原则
 
@@ -625,7 +625,7 @@ print(app.invoke({"x": 5}))
 
 **为节点添加重试策略，需要在add_node中设置retry_policy参数。retry_policy参数接受一个RetryPolicy命名元组对象。默认情况下，retry_on参数使用default_retry_on函数，该函数会在遇到任何异常时重试**
 
-![image-20260523155503803](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260523155503803.png)
+![image-20260523155503803](./assets/image-20260523155503803.png)
 
 ------
 
@@ -831,7 +831,7 @@ def value_error_call(state: AtguiguState) -> Dict[str, Any]:
 
 ------
 
-![image-20260525084718150](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260525084718150.png)
+![image-20260525084718150](./assets/image-20260525084718150.png)
 
 ### 条件边和普通边
 
@@ -1168,7 +1168,7 @@ builder.add_edge("make_joke", END)
 
 最后的图是这样的
 
-![image-20260525100136207](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260525100136207.png)
+![image-20260525100136207](./assets/image-20260525100136207.png)
 
 ### Command
 
@@ -1178,7 +1178,7 @@ Command就是路由到一个节点,并更新数据
 
 ------
 
-![image-20260525105656138](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260525105656138.png)
+![image-20260525105656138](./assets/image-20260525105656138.png)
 
 **走条新路，状态更新**
 
@@ -1462,6 +1462,6 @@ builder = StateGraph(AgentState, context_schema=ContextSchema)
 
 创建对象时context_schema=ContextSchema上下文消息传进去
 
-@dataclass相当于省掉"init","eq","repr"的魔法方法,更专业有了dataclass不允许再写init魔法方法,要写的话使用![image-20260525113231683](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260525113231683.png)
+@dataclass相当于省掉"init","eq","repr"的魔法方法,更专业有了dataclass不允许再写init魔法方法,要写的话使用![image-20260525113231683](./assets/image-20260525113231683.png)
 
-![image-20260525113346402](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260525113346402.png)
+![image-20260525113346402](./assets/image-20260525113346402.png)

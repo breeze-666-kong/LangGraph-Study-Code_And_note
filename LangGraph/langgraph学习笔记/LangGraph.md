@@ -14,18 +14,18 @@ langgraph需要人机合作工作
 
 **多智能体协作：分层规划与共创协作两种模式，模拟现实团队工作方式**
 
-![image-20260522160745239](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260522160745239.png)
+![image-20260522160745239](./assets/image-20260522160745239.png)
 
-![image-20260522160758008](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260522160758008.png)
+![image-20260522160758008](./assets/image-20260522160758008.png)
 
 *<u>**LangGraph的灵魂：**</u>*
 *<u>**State(状态)、Nodes（节点)、Edges(边)、Graph(图)。***</u>
 
-![image-20260522160828398](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260522160828398.png)
+![image-20260522160828398](./assets/image-20260522160828398.png)
 
 ## LangGraph技术架构
 
-![image-20260523080326891](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260523080326891.png)
+![image-20260523080326891](./assets/image-20260523080326891.png)
 
 **打印图的ascii可视化结构**
 
@@ -168,15 +168,15 @@ print(app.get_graph().print_ascii())
 
 1.将图打印成可视化图如下图
 
-![image-20260523092116237](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260523092116237.png)
+![image-20260523092116237](./assets/image-20260523092116237.png)
 
 ```python
 print(app.get_graph().draw_mermaid())
 ```
 
-2.打印出代码格式到mermaid格式中的代码生成图![image-20260523092226931](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260523092226931.png)
+2.打印出代码格式到mermaid格式中的代码生成图![image-20260523092226931](./assets/image-20260523092226931.png)
 
-![image-20260523092236394](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20260523092236394.png)
+![image-20260523092236394](./assets/image-20260523092236394.png)
 
 ```python
 # #6.3 生成 PNG并写入文件
